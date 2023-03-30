@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        
+        {# Feuilles de styles #}
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/css/styles.css')}}">
+        {% endblock %}
+
+        {# Fichiers js #}
+        
+        {% block javascripts %}
+        <script src="{{ asset('assets/js/scripts.js')}}" defer></script>
+        {% endblock %}
+
+    </head>
+    <body>
+        {% block head %}
+            {# Ici Navbar #}
+            <!-- Responsive navbar-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="accueil.html"><img src="assets/assets/HanoverFAQ.png"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Consultation</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="questions.html">Questions</a></li>
+                                    <li><a class="dropdown-item" href="#">Placeholder</a></li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item" href="#">Placeholder</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ajout & Modification</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="ajout.html">Ajout</a></li>
+                                    <li><a class="dropdown-item" href="modification.html">Modification</a></li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item" href="#">Placeholder</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administration</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="administration.html">Administration</a></li>
+                                    <li><a class="dropdown-item" href="#">Placeholder</a></li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item" href="#">Placeholder</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+             <!-- Bootstrap core JS-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Core theme JS-->
+            <script src="js/scripts.js"></script>
+            <!-- End bootstrap core JS -->
+            <!-- End responsive navbar-->
+
+        {% endblock %}
+    {% block body %} {% endblock %}
+    </body>
+</html>
