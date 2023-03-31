@@ -1,4 +1,4 @@
 # FAQ_Hanover_Symfony
 
-composer update
-symfony server:start
+- composer update <br>
+- symfony server:start
