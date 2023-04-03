@@ -1,2 +1,80 @@
 {% extends 'base.html.twig' %}
 
+{% block body %}
+
+<!-- Page content-->
+<div class="bg_form">
+<form class="form_content">
+    <h2 class="title_form" >Page de modification</h2>
+    <h3 class="title_form"></h3>
+    <br>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Nom du projet</label>
+    <input type="text" class="form-control" id="project" placeholder="nom du projet">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Catégorie</label>
+        <div class="form-group">
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>Catégorie 1</option>
+              <option>Catégorie 2</option>
+              <option>Catégorie 3</option>
+              <option>Catégorie 4</option>
+              <option>Catégorie 5</option>
+              <option>Catégorie 6</option>
+              <option>Catégorie 7</option>
+              <option>Catégorie 8</option>
+              <option>Catégorie 9</option>
+              <option>Catégorie 10</option>
+            </select>
+        </div>
+        </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Objet</label>
+        <input type="text" class="form-control" id="project" placeholder="Sommaire">
+        </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Description</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description"></textarea>
+        </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Tags</label>
+        <div class="form-group">
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>Tag 1</option>
+              <option>Tag 2</option>
+              <option>Tag 3</option>
+              <option>Tag 4</option>
+              <option>Tag 5</option>
+            </select>
+        </div>
+        </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Version du logiciel</label>
+        <div class="form-group">
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>V1.0</option>
+              <option>V2.0</option>
+              <option>V3.0</option>
+              <option>V5.0</option>
+              <option>V5.1</option>
+            </select>
+        </div>
+    </div>
+        <br>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>
+</div>
+<!-- End page content -->
+
+<!-- ajouter une liste de séléction des problématiques avant -->
+
+
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<!-- End bootstrap core JS -->
+
+{% endblock %}

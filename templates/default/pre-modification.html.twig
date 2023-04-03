@@ -1,2 +1,32 @@
 {% extends 'base.html.twig' %}
 
+{% block body %}
+
+        <!-- Page content-->
+        <br><br>
+        <h2 class="title_form">Liste des problématiques modifiables :</h2>
+        <div class="bg_form">
+            <li class="no_list">
+                <ul class="no_list" id="mantis-list">
+                    <li><a class="dropdown-item">Nom de la problématique #1<button type="button" class="btn btn-warning">Modifier</button> </a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li><a class="dropdown-item">Nom de la problématique #2<button type="button" class="btn btn-warning">Modifier</button> </a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li><a class="dropdown-item">Nom de la problématique #3<button type="button" class="btn btn-warning">Modifier</button> </a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                </ul>
+            </li>
+        </div>
+        <!-- End page content -->
+
+        <!-- ajouter une liste de séléction des problématiques avant -->
+
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- End bootstrap core JS -->
+
+{% endblock %}
