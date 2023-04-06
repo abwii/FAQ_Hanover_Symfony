@@ -1,4 +1,6 @@
 # FAQ_Hanover_Symfony
 
-- composer update (sur bit bash) <br>
+- sur bash :
+ - composer require easycorp/easyadmin-bundle
+ - composer update
 - symfony server:start
