@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Register
+        
+    
+{% endblock %}
+
+{% block body %}
+
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <h1>
+                    Register       
+                </h1>
+                {{ form_start(registrationForm) }}
+                <fieldset>
+                    {{ form_row(registrationForm.email) }}
+                    {{ form_row(registrationForm.firstname) }}
+                    {{ form_row(registrationForm.lastname) }}
+                </fieldset>
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Password'
+                }) }}
+                {{ form_row(registrationForm.AgreeTerms) }}
+
+                <button type="submit" class="btn btn-danger btn-lg mt-3">
+                    Register         
+                </button>
+                {{ form_end(registrationForm) }}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

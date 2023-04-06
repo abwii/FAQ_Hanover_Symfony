@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 03 avr. 2023 à 10:30
+-- Généré le : jeu. 06 avr. 2023 à 13:05
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -245,14 +245,18 @@ INSERT INTO `mantis` (`Identifiant`, `Projet`, `Rapporteur`, `Assigné_à`, `Pri
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(180) NOT NULL,
-  `password` text NOT NULL,
-  `lastname` varchar(100) NOT NULL,
-  `firstname` varchar(100) NOT NULL,
+  `email` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
+  `password` text COLLATE utf8_unicode_ci NOT NULL,
+  `lastname` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `firstname` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+<<<<<<< HEAD
   `roles` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`roles`))
+=======
+  `roles` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
+>>>>>>> 7de723d (bdd correcte)
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
