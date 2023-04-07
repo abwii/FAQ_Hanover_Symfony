@@ -250,11 +250,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `lastname` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `firstname` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-<<<<<<< HEAD
   `roles` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`roles`))
-=======
-  `roles` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
->>>>>>> 7de723d (bdd correcte)
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 COMMIT;
