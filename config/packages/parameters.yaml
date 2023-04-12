@@ -1,0 +1,7 @@
+parameters :
+  locale: fr
+  mantis_database_host: 217.16.1.81
+  mantis_database_port: 3306
+  mantis_database_user: root
+  mantis_database_password: AvlHanover
+  mantis_database_name: mantis

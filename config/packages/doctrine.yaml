@@ -1,3 +1,10 @@
+imports:
+    {ressource: parameters.yaml}
+
+parameters:
+    env(DATABASE_URL): "mysql://root:@127.0.0.1:3306/hanoverfaq?serverVersion=8&charset=utf8mb4"
+    env(DATABASE_MANTIS_URL) : "mysql://%mantis_database_user%:%mantis_database_password%@%mantis_database_host%:%mantis_database_port%/%mantis_database_name%"
+
 doctrine:
     dbal:
         url: '%env(resolve:DATABASE_URL)%'
