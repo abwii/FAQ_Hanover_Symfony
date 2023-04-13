@@ -37,125 +37,38 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Consultation
-                                                                                                                                            
-                                                                                                        
-                                                                    
+                                <a class="nav-link" id="navbarDropdown" href="questions" role="button">
+                                    Consultation                     
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li>
-                                        <a class="dropdown-item" href="questions">
-                                            Questions
-                                                                                                                                                                            
-                                                                                                                                
-                                                                                    
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            Placeholder
-                                                                                                                                                                            
-                                                                                                                                
-                                                                                    
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider" />
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            Placeholder
-                                                                                                                                                                            
-                                                                                                                                
-                                                                                    
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Ajout & Modification
-                                                                                                                                            
-                                                                                                        
-                                                                    
+                                    Ajout & Modification                       
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <li>
                                         <a class="dropdown-item" href="ajout">
-                                            Ajout
-                                                                                                                                                                            
-                                                                                                                                
-                                                                                    
+                                            Ajout                               
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="modification.html">
-                                            Modification
-                                                                                                                                                                            
-                                                                                                                                
-                                                                                    
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider" />
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            Placeholder
-                                                                                                                                                                            
-                                                                                                                                
-                                                                                    
+                                            Modification                             
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Administration
-                                                                                                                                            
-                                                                                                        
-                                                                    
+                                <a class="nav-link" id="navbarDropdown" href="admin" role="button">
+                                    Administration                          
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li>
-                                        <a class="dropdown-item" href="admin">
-                                            Administration
-                                                                                                                                                                            
-                                                                                                                                
-                                                                                    
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            Placeholder
-                                                                                                                                                                            
-                                                                                                                                
-                                                                                    
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider" />
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            Placeholder
-                                                                                                                                                                            
-                                                                                                                                
-                                                                                    
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             {% if app.user %}
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ path('app_logout') }}">
-                                        Log out
-                                                                                                                                                            
-                                                                                                                    
-                                                                            
+                                        Log out                               
                                     </a>
                                 </li>
 
@@ -163,8 +76,6 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ path('app_register') }}">
                                             Register                    
-                                                                                                                        
-                                                                                
                                         </a>
                                     </li>
                                 {% endif %}

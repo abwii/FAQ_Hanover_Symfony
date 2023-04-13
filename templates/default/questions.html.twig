@@ -9,41 +9,42 @@
 <div class="bg_form question-form" id="Q1">
 <br>
 <h2 class="title_form">Question 1 - Votre problème concerne...</h2>
+
 <p class="questions-tree"></p>
 <div class="zone-questions">
     <div class="row">
-        <div class="col-sm btn-outline-primary case-question" onclick="Action1()">
+        <div class="col-sm btn-outline-primary case-question" onclick="R1_1()">
             <p class="question">Application mobile</p>
         </div>
-        <div class="col-sm btn-outline-primary case-question" onclick="Action1()">
+        <div class="col-sm btn-outline-primary case-question" onclick="R1_2()">
             <p class="question">Base de données</p>
         </div>
-        <div class="col-sm btn-outline-primary case-question" onclick="Action1()">
+        <div class="col-sm btn-outline-primary case-question" onclick="R1_3()">
             <p class="question">Embarqué</p>
         </div>
-        <div class="col-sm btn-outline-primary case-question" onclick="Action1()">
+        <div class="col-sm btn-outline-primary case-question" onclick="R1_4()">
             <p class="question">Général</p>
         </div>
     </div>
         <div class="row">
-            <div class="col-sm btn-outline-primary case-question" onclick="Action1()">
+            <div class="col-sm btn-outline-primary case-question" onclick="R1_5()">
             <p class="question">IHM</p>
             </div>
-            <div class="col-sm btn-outline-primary case-question" onclick="Action1()">
+            <div class="col-sm btn-outline-primary case-question" onclick="R1_6()">
             <p class="question">Intervention sur les données</p>
             </div>
-            <div class="col-sm btn-outline-primary case-question" onclick="Action1()">
+            <div class="col-sm btn-outline-primary case-question" onclick="R1_7()">
             <p class="question">Livraison / Mise à jour</p>
             </div>
-            <div class="col-sm btn-outline-primary case-question" onclick="Action1()">
+            <div class="col-sm btn-outline-primary case-question" onclick="R1_8()">
             <p class="question">Serveur</p>
         </div>
     </div>
         <div class="row">
-            <div class="col-sm btn-outline-primary case-question" onclick="Action1()">
+            <div class="col-sm btn-outline-primary case-question" onclick="R1_9()">
             <p class="question">SIRI / SIRI Light</p>
             </div>
-            <div class="col-sm btn-outline-primary case-question" onclick="Action1()">
+            <div class="col-sm btn-outline-primary case-question" onclick="R1_10()">
             <p class="question">Non déterminé</p>
         </div>
     </div>
@@ -55,38 +56,39 @@
 <div class="bg_form question-form-invisible" id="Q2">
 <br>
 <h2 class="title_form">Question 2 - Son impact est-il...</h2>
-<p class="questions-tree">/Catégorie</p>
+<button type="button" class="btn btn-secondary questions-tree" onclick="Retour1()">Retour</button>
+<p class="questions-tree" id="history1">/Catégorie</p>
 <div class="container">
     <div class="row">
-        <div class="col-sm btn-outline-primary case-question" onclick="Action2()">
+        <div class="col-sm btn-outline-primary case-question" onclick="R2_1()">
             <p class="question">Mineur</p>
         </div>
-        <div class="col-sm btn-outline-primary case-question" onclick="Action2()">
+        <div class="col-sm btn-outline-primary case-question" onclick="R2_2()">
             <p class="question">Majeur</p>
         </div>
-        <div class="col-sm btn-outline-primary case-question" onclick="Action2()">
+        <div class="col-sm btn-outline-primary case-question" onclick="R2_3()">
             <p class="question">Bloquant</p>
         </div>
-        <div class="col-sm btn-outline-primary case-question" onclick="Action2()">
+        <div class="col-sm btn-outline-primary case-question" onclick="R2_4()">
             <p class="question">Simple</p>
         </div>
     </div>
         <div class="row">
-            <div class="col-sm btn-outline-primary case-question" onclick="Action2()">
+            <div class="col-sm btn-outline-primary case-question" onclick="R2_5()">
             <p class="question">Critique</p>
             </div>
-            <div class="col-sm btn-outline-primary case-question" onclick="Action2()">
+            <div class="col-sm btn-outline-primary case-question" onclick="R2_6()">
             <p class="question">Fonctionnalité</p>
             </div>
-            <div class="col-sm btn-outline-primary case-question" onclick="Action2()">
+            <div class="col-sm btn-outline-primary case-question" onclick="R2_7()">
             <p class="question">Cosmétique</p>
             </div>
-            <div class="col-sm btn-outline-primary case-question" onclick="Action2()">
+            <div class="col-sm btn-outline-primary case-question" onclick="R2_8()">
             <p class="question">Serveur</p>
         </div>
     </div>
         <div class="row">
-            <div class="col-sm btn-outline-primary case-question" onclick="Action2()">
+            <div class="col-sm btn-outline-primary case-question" onclick="R2_9()">
             <p class="question">Je ne sais pas</p>
         </div>
     </div>
@@ -98,7 +100,9 @@
 <div class="bg_form question-form-invisible" id="Q3">
 <br>
 <h2 class="title_form">Question 3 - Ajouter des mots clés à la recherche :</h2>
-<p class="questions-tree">/Catégorie/Impact</p>
+<button type="button" class="btn btn-secondary questions-tree" onclick="Retour2()">Retour</button>
+<p class="questions-tree" id="history1">/Catégorie</p>
+<p class="questions-tree" id="history2">/Catégorie/Impact</p>
 <div class="container">
     <br>
 
