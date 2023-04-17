@@ -2,14 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>
-            {% block title %}
-                Welcome!
-                                                            
-                                            
-                            
-            {% endblock %}
-        </title>
+
 
         {# Feuilles de styles #}
         {% block stylesheets %}
@@ -25,6 +18,9 @@
     </head>
     <body>
         {% block head %}
+        
+        <link rel="icon" href="icon_path" type="public\assets\assets\Hanover.ico">
+
             {# Ici Navbar #}
             <!-- Responsive navbar-->
                 <nav class="navbar navbar-expand-lg navbar-dark bg-light"> <div class="container">
