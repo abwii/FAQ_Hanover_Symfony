@@ -6,3 +6,9 @@ FAQ_Hanover_Symfony
     composer update
     symfony server:start
 
+
+Login admin : testbtssio@gmail.com
+MDP admin : btssio
+
+Login lambda : erol.malonga@gmail.com
+MDP lambda : erolmalonga
