@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<title>HanoverFAQ - Ajout</title>
+
+<!-- Page content-->
+
+<div class="bg_form">
+<form  class="form_content">
+    <h2 class="title_form" >Page d'ajout</h2>
+    <h3 class="title_form">Quelle est la problématique à ajouter ?</h3>
+    <br>
+    <div class="form-group">
+    <label for="NomProjet">Nom du projet</label>
+    <input type="text" class="form-control" id="project" placeholder="Project">
+    </div>
+    <div class="form-group">
+        <label for="Categories">Catégorie</label>
+        <div class="form-group">
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>Application mobile</option>
+              <option>Base de données</option>
+              <option>Embarqué</option>
+              <option>Général</option>
+              <option>IHM</option>
+              <option>Intervention sur les données</option>
+              <option>Livraison / Mise à jour</option>
+              <option>Serveur</option>
+              <option>SIRI / SIRI Light</option>
+              <option>Non déterminé</option>
+            </select>
+        </div>
+        </div>
+    <div class="form-group">
+        <label for="Objet">Objet</label>
+        <input type="text" class="form-control" id="project" placeholder="Summary">
+        </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description"></textarea>
+        </div>
+    <div class="form-group">
+        <label for="Version">Version du logiciel</label>
+        <input type="text" class="form-control" id="version" placeholder="Version">
+    </div>
+        <br>
+    
+    <div class="form-group">
+    <label for="Solution">Solution : </label>
+    <textarea class="form-control" id="Solution" rows="10"></textarea>
+    <div class="mb-3">
+        <label for="formFileMultiple" class="form-label">Ajouter des fichiers : </label>
+        <input class="form-control" type="file" id="formFileMultiple" multiple>
+        <button type="button" class="btn btn-success btn-rechercher">Rechercher</button>
+    </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+</div>
+</form>
+</div>
+
+<div class="bg_form">
+
+
+
+</div>
+<!-- End page content -->
+
+<!-- a terme, btn pour switch de langue -->
+
+
+
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<!-- End bootstrap core JS -->
+
+{% endblock %}

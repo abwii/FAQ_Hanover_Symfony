@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<title>Page d'accueil</title>
+
+	<!-- Page content-->
+
+	<div class="bg_form">
+		<h1 class="title_form">HANOVER</h1>
+		<div class="row d-flex justify-content-center">
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Ajouter</h5>
+						<p class="card-text">Ici vous pouvez ajouter les solutions à des bug rencontrés.</p>
+						<a href="ajouter" class="btn btn-outline-danger btn-lg">Cliquez ici !</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Questions</h5>
+						<p class="card-text">Ici vous avez accès à tout les bugs rencontrés par nos collaborateurs.</p>
+						<a href="questions" class="btn btn-outline-danger btn-lg">Cliquez ici !</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+        <br>
+		<div class="row d-flex justify-content-center">
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Modification</h5>
+						<p class="card-text">Ici vous avez la possibilité de modifier les informations d'un ticket.</p>
+						<a href="pre-modification" class="btn btn-outline-danger btn-lg">Cliquez ici !</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Contact</h5>
+						<p class="card-text">Ici vous pouvez contacter un administrateur si vous avez des questions.</p>
+						<a href="#" class="btn btn-outline-danger btn-lg">Cliquez ici !</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+	</div>
+	<!-- End page content -->
+{% endblock %}
