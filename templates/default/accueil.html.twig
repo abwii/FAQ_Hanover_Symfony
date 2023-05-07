@@ -2,39 +2,55 @@
 
 {% block body %}
 
-<title>Page d'accueil</title>
+	<title>Page d'accueil</title>
 
-<!-- Page content-->
+	<!-- Page content-->
 
-<div class="bg_form">
-<h1 class="title_form">Page de test</h1>
-<div class="col-sm btn-outline-primary case-question" onclick="window.location='/'">
-    <p class="question">Accueil</p>
-</div>
-<div class="col-sm btn-outline-primary case-question" onclick="window.location='admin'">
-    <p class="question">Administration</p>
-</div>
-<div class="col-sm btn-outline-primary case-question" onclick="window.location='ajout'">
-    <p class="question">Ajout</p>
-</div>
-<div class="col-sm btn-outline-primary case-question" onclick="window.location='login'">
-    <p class="question">Login</p>
-</div>
-<div class="col-sm btn-outline-primary case-question" onclick="window.location='modification'">
-    <p class="question">Modification</p>
-</div>
-<div class="col-sm btn-outline-primary case-question" onclick="window.location='pre-modification'">
-    <p class="question">Pre-modification</p>
-</div>
-<div class="col-sm btn-outline-primary case-question" onclick="window.location='questions'">
-    <p class="question">Questions</p>
-</div>
-<div class="col-sm btn-outline-primary case-question" onclick="window.location='resultat'">
-    <p class="question">Resultat</p>
-</div>
-<div class="col-sm btn-outline-primary case-question" onclick="window.location='solution'">
-    <p class="question">Solution</p>
-</div>
-</div>
-<!-- End page content -->
+	<div class="bg_form">
+		<h1 class="title_form">HANOVER</h1>
+		<div class="row d-flex justify-content-center">
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Ajouter</h5>
+						<p class="card-text">Ici vous pouvez ajouter les solutions à des bug rencontrés.</p>
+						<a href="ajouter" class="btn btn-outline-danger btn-lg">Cliquez ici !</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Questions</h5>
+						<p class="card-text">Ici vous avez accès à tout les bugs rencontrés par nos collaborateurs.</p>
+						<a href="questions" class="btn btn-outline-danger btn-lg">Cliquez ici !</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+        <br>
+		<div class="row d-flex justify-content-center">
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Modification</h5>
+						<p class="card-text">Ici vous avez la possibilité de modifier les informations d'un ticket.</p>
+						<a href="pre-modification" class="btn btn-outline-danger btn-lg">Cliquez ici !</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Contact</h5>
+						<p class="card-text">Ici vous pouvez contacter un administrateur si vous avez des questions.</p>
+						<a href="#" class="btn btn-outline-danger btn-lg">Cliquez ici !</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+	</div>
+	<!-- End page content -->
 {% endblock %}

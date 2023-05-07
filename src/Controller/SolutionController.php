@@ -6,11 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ModificationController extends AbstractController
+class SolutionController extends AbstractController
 {
-    #[Route('/modification', name: 'app_modification')]
+    #[Route('/solution', name: 'app_solution')]
     public function index(): Response
     {
-        return $this->render('default/modification.html.twig');
+        return $this->render('default/solution.html.twig');
     }
 }

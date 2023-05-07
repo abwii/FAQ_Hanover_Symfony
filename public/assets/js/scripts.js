@@ -1,5 +1,7 @@
 console.log("Bonjour");
 
+var ReqSQL = "";
+
 function Action1(){
     Q1.classList.remove("question-form");
     Q1.classList.add("question-form-invisible");
@@ -130,3 +132,4 @@ function R2_9(){
     Action2();
     document.getElementById("history2").innerHTML = "Je ne sais pas";
 }
+

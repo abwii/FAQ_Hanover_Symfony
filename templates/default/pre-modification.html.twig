@@ -11,12 +11,10 @@
         <div class="bg_form">
             <li class="no_list">
                 <ul class="no_list" id="mantis-list">
-                    <li><a class="dropdown-item">Nom de la problématique #1<button type="button" class="btn btn-warning">Modifier</button> </a></li>
+                    {% for pb in allProbs %}
+                    <li><a class="dropdown-item">{{pb.projectName}}<button type="button" class="btn btn-warning" onclick="location.href='/modification#{{pb.id}}';">Modifier</button> </a></li>
                     <li><hr class="dropdown-divider" /></li>
-                    <li><a class="dropdown-item">Nom de la problématique #2<button type="button" class="btn btn-warning">Modifier</button> </a></li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li><a class="dropdown-item">Nom de la problématique #3<button type="button" class="btn btn-warning">Modifier</button> </a></li>
-                    <li><hr class="dropdown-divider" /></li>
+                    {% endfor %}
                 </ul>
             </li>
         </div>

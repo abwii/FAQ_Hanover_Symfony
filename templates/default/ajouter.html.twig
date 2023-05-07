@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Modification
+	Register
 
 
 {% endblock %}
@@ -15,21 +15,21 @@
 					<div class="row">
 						<div class="col">
 							<h1>
-								Modification
+								Register
 							</h1>
-							{{ form_start(modifForm) }}
+							{{ form_start(ajoutForm) }}
 							<fieldset>
-								{{ form_row(modifForm.ProjectName) }}
-								{{ form_row(modifForm.Categorie) }}
-								{{ form_row(modifForm.Objet) }}
-								{{ form_row(modifForm.Version) }}
-								{{ form_row(modifForm.Description) }}
-								{{ form_row(modifForm.Solution) }}
+								{{ form_row(ajoutForm.ProjectName) }}
+								{{ form_row(ajoutForm.Categorie) }}
+								{{ form_row(ajoutForm.Objet) }}
+								{{ form_row(ajoutForm.Version) }}
+								{{ form_row(ajoutForm.Description) }}
+								{{ form_row(ajoutForm.Solution) }}
 							</fieldset>
 							<button type="submit" class="btn btn-danger btn-lg mt-3">
 								Register
 							</button>
-							{{ form_end(modifForm) }}
+							{{ form_end(ajoutForm) }}
 						</div>
 					</div>
 				</section>

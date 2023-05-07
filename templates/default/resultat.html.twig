@@ -11,12 +11,14 @@
         <div class="bg_form">
             <li class="no_list">
                 <ul class="no_list" id="mantis-list">
-                    <li><a class="dropdown-item">Nom du mantis #1<button type="button" class="btn btn-primary">Voir le Mantis</button> </a></li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li><a class="dropdown-item">Nom du mantis #2<button type="button" class="btn btn-primary">Voir le Mantis</button> </a></li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li><a class="dropdown-item">Nom du mantis #3<button type="button" class="btn btn-primary">Voir le Mantis</button> </a></li>
-                    <li><hr class="dropdown-divider" /></li>
+                    {% for rs in allResults %}
+                        {% if rs.Categorie == "Catégorie" %}
+                            {% if rs.Impact == "Impact" %}
+                                <li><a class="dropdown-item">{{rs.projectName}}<button type="button" class="btn btn-primary">Voir la solution</button> </a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
                 </ul>
             </li>
         </div>
