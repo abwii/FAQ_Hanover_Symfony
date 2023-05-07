@@ -4,6 +4,7 @@
 
 <link href="https://unpkg.com/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
 
+
 <title>HanoverFAQ</title>
 
 <!-- Page content-->
@@ -59,7 +60,7 @@
 <br>
 <h2 class="title_form">Question 2 - Son impact est-il...</h2>
 <button type="button" class="btn btn-secondary questions-tree" onclick="Retour1()">Retour</button>
-<p class="questions-tree" id="history1">/Catégorie</p>
+{# <p class="questions-tree" id="history1">/Catégorie</p> #}
 <div class="container">
     <div class="row">
         <div class="col-sm btn-outline-primary case-question" onclick="R2_1()">
@@ -103,8 +104,8 @@
 <br>
 <h2 class="title_form">Question 3 - Ajouter des mots clés à la recherche :</h2>
 <button type="button" class="btn btn-secondary questions-tree" onclick="Retour2()">Retour</button>
-<p class="questions-tree" id="history1">/Catégorie</p>
-<p class="questions-tree" id="history2">/Catégorie/Impact</p>
+{# <p class="questions-tree" id="history1">/Catégorie</p>
+<p class="questions-tree" id="history2">/Catégorie/Impact</p> #}
 <div class="container">
     <br>
 
@@ -115,14 +116,30 @@
     <script src="https://unpkg.com/@yaireo/tagify"></script>
     <script src="https://unpkg.com/@yaireo/tagify@3.1.0/dist/tagify.polyfills.min.js"></script>
     <script>
+
     var input = document.querySelector('input[name=tags]');
-    new Tagify(input)
+    var tagify = new Tagify(input);
+    
+
+
+    // définir une fonction pour afficher les valeurs de tous les tags
+    function displayTags() {
+        // récupérer la valeur de la barre de tags
+        var tagValues = tagify.value;
+        // afficher le tableau dans la console
+
+        const valuesTags = tagValues.map(obj => obj.value);
+
+        console.log(valuesTags);
+        return valuesTags;
+    }
+
     </script>
     <br>
     
 </div>
-<button type="button" class="btn btn-success btn-rechercher">Rechercher</button>
-<br>
+<button onclick="displayTags(); document.getElementById('demo').innerHTML=displayTags();" class="btn btn-success btn-rechercher">Rechercher</button>
+<p id="demo">ici tags</p>
 </div>
 
 
@@ -133,5 +150,9 @@
     <!-- Core theme JS-->
     {# <script src="js/scripts.js"></script> #}
     <!-- End bootstrap core JS -->
+
+
+
+
 
 {% endblock %}
