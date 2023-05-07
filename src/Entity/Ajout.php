@@ -30,6 +30,9 @@ class Ajout
     private ?string $Categorie = null;
 
     #[ORM\Column(length: 100)]
+    private ?string $Impact = null;
+
+    #[ORM\Column(length: 100)]
     private ?string $Version = null;
 
     #[ORM\Column(length: 100)]
@@ -101,6 +104,16 @@ class Ajout
     public function setCategorie(string $Categorie): self
     {
         $this->Categorie = $Categorie;
+
+        return $this;
+    }
+    public function getImpact(): ?string
+    {
+        return $this->Impact;
+    }
+    public function setImpact(string $Impact): self
+    {
+        $this->Impact = $Impact;
 
         return $this;
     }

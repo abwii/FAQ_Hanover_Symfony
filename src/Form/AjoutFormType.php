@@ -39,6 +39,20 @@ class AjoutFormType extends AbstractType
 
                 ],
             ])
+            ->add('Impact', ChoiceType::class, [
+                'choices' => [
+                    'Mineur' => 'Mineur',
+                    'Majeur' => 'Majeur',
+                    'Bloquant' => 'Bloquant',
+                    'Simple' => 'Simple',
+                    'Critique' => 'Critique',
+                    'Fonctionnalité' => 'Fonctionnalité',
+                    'Cosmétique' => 'Cosmétique',
+                    'Serveur' => 'Serveur',
+                    'Je ne sais pas' => 'Je ne sais pas',
+
+                ],
+            ])
             ->add('Objet', TextType::class, [
                 'attr' => [
                     'class' => 'form-control',
