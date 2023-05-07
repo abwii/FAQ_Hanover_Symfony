@@ -4,3 +4,4 @@ controllers:
 admin:
     path : /admin
     controller: ../src/Controller/AdminController.php
+

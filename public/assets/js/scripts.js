@@ -132,4 +132,3 @@ function R2_9(){
     Action2();
     document.getElementById("history2").innerHTML = "Je ne sais pas";
 }
-

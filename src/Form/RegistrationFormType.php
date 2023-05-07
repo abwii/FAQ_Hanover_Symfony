@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Users;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -21,22 +22,33 @@ class RegistrationFormType extends AbstractType
         $builder
             ->add('email', EmailType::class, [
                 'attr' => [
-                    'class'=>'form-control',
+                    'class' => 'form-control',
                 ],
                 'label' => 'Email',
-                ])
+            ])
             ->add('lastname', TextType::class, [
                 'attr' => [
-                    'class'=>'form-control',
+                    'class' => 'form-control',
                 ],
                 'label' => 'Lastname',
-                ])
+            ])
             ->add('firstname', TextType::class, [
                 'attr' => [
-                    'class'=>'form-control',
+                    'class' => 'form-control',
                 ],
                 'label' => 'Firstname',
-                ])
+            ])
+            ->add('roles', ChoiceType::class, [
+                'choices' => [
+                    'User' => 'ROLE_USER',
+                    'Admin' => 'ROLE_ADMIN',
+                ],
+                'multiple' => true,
+                'attr' => [
+                    'class' => 'form-control',
+                ],
+                'label' => 'Role',
+            ])
             ->add('AgreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [
@@ -50,8 +62,10 @@ class RegistrationFormType extends AbstractType
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
                 'mapped' => false,
-                'attr' => ['autocomplete' => 'new-password',
-                            'class'=>'form-control'],
+                'attr' => [
+                    'autocomplete' => 'new-password',
+                    'class' => 'form-control'
+                ],
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Please enter a password',
@@ -64,8 +78,7 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
                 'label' => 'Password',
-            ])
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

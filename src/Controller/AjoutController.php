@@ -20,7 +20,7 @@ class AjoutController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
+            
             $entityManager->persist($user);
             $entityManager->flush();
             // do anything else you need here, like send an email
@@ -37,7 +37,6 @@ class AjoutController extends AbstractController
             'ajoutForm' => $form->createView(),
         ]);
     }
-
 
     #[Route('/modification', name: 'app_modification')]
     public function modif(Request $request, EntityManagerInterface $entityManager): Response
@@ -64,5 +63,6 @@ class AjoutController extends AbstractController
             'modifForm' => $form->createView(),
         ]);
     }
+    
     
 }
