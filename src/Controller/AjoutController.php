@@ -30,7 +30,9 @@ class AjoutController extends AbstractController
             //     $authenticator,
             //     $request
             // );
-            echo ("ajouté");
+            echo '<script language="javascript">';
+            echo 'alert("Project successfully added!")';
+            echo '</script>';
         }
         
         return $this->render('default/ajouter.html.twig', [
