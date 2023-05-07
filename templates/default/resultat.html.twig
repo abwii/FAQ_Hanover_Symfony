@@ -2,6 +2,12 @@
 
 {% block body %}
 
+{% set ReqSQL1 = app.request.cookies.get('ReqSQL1') %}
+{% set ReqSQL2 = app.request.cookies.get('ReqSQL2') %}
+{% set ReqSQL3 = app.request.cookies.get('ReqSQL3') %}
+{% set tags = ReqSQL3|split(',') %}
+{% set Array = [] %}
+
 <title>HanoverFAQ</title>
 
         <!-- Page content-->
@@ -11,17 +17,21 @@
         <div class="bg_form">
             <li class="no_list">
                 <ul class="no_list" id="mantis-list">
-                    {# {% for rs in allResults %}
+                    {% for rs in allResults %}
                         {% if rs.Categorie == ReqSQL1 %}
                             {% if rs.Impact == ReqSQL2 %}
-                                <li><a class="dropdown-item">{{rs.projectName}}<button type="button" class="btn btn-primary">Voir la solution</button> </a></li>
-                                <li><hr class="dropdown-divider" /></li>
+                                {% for tag in tags %}
+                                    {% if rs.description matches '/\\b' ~ tag ~ '/i' %}
+                                        {% if rs.id not in Array %}
+                                            <li><a class="dropdown-item">{{rs.projectName}}<button type="button" class="btn btn-primary">Voir la solution</button> </a></li>
+                                            <li><hr class="dropdown-divider" /></li>
+                                            {% set Array = Array|merge([rs.id]) %}
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
                             {% endif %}
                         {% endif %}
-                    {% endfor %} #}
-
-                    
-                    <p>Bonjour {{ ReqSQL1 }}!</p>
+                    {% endfor %}
                     
                     
                 </ul>

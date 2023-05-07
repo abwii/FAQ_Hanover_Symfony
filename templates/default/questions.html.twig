@@ -127,20 +127,17 @@
         // récupérer la valeur de la barre de tags
         var tagValues = tagify.value;
         // afficher le tableau dans la console
-
         const valuesTags = tagValues.map(obj => obj.value);
-
         console.log(valuesTags);
         sessionStorage.setItem('ReqSQL3', valuesTags);
-        return valuesTags;
+        document.cookie = 'ReqSQL3='+valuesTags;
     }
 
     </script>
     <br>
     
 </div>
-<button onclick="displayTags(); document.getElementById('demo').innerHTML=displayTags(); window.location='/resultat';" class="btn btn-success btn-rechercher">Rechercher</button>
-<p id="demo">ici tags</p>
+<button onclick="displayTags(); window.location='/resultat';" class="btn btn-success btn-rechercher">Rechercher</button>
 </div>
 
 
