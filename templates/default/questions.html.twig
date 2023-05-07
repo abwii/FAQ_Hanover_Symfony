@@ -131,6 +131,7 @@
         const valuesTags = tagValues.map(obj => obj.value);
 
         console.log(valuesTags);
+        sessionStorage.setItem('ReqSQL3', valuesTags);
         return valuesTags;
     }
 
@@ -138,7 +139,7 @@
     <br>
     
 </div>
-<button onclick="displayTags(); document.getElementById('demo').innerHTML=displayTags();" class="btn btn-success btn-rechercher">Rechercher</button>
+<button onclick="displayTags(); document.getElementById('demo').innerHTML=displayTags(); window.location='/resultat';" class="btn btn-success btn-rechercher">Rechercher</button>
 <p id="demo">ici tags</p>
 </div>
 

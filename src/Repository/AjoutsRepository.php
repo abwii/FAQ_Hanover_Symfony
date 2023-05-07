@@ -40,6 +40,19 @@ class AjoutsRepository extends ServiceEntityRepository
         }
     }
 
+    public function findByReqSql($reqSQL1, $reqSQL2)
+    {
+        $qb = $this->createQueryBuilder('a');
+
+        $qb->andWhere('a.ReqSQL1 = :ReqSQL1')
+           ->setParameter('ReqSQL1', $reqSQL1);
+
+        $qb->andWhere('a.ReqSQL2 = :ReqSQL2')
+           ->setParameter('ReqSQL2', $reqSQL2);
+
+        return $qb->getQuery()->getResult();
+    }
+
 
 //    /**
 //     * @return Ajout[] Returns an array of Ajout objects
@@ -65,4 +78,5 @@ class AjoutsRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+
 }

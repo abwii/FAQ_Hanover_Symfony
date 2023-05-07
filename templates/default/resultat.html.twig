@@ -11,14 +11,19 @@
         <div class="bg_form">
             <li class="no_list">
                 <ul class="no_list" id="mantis-list">
-                    {% for rs in allResults %}
-                        {% if rs.Categorie == "Catégorie" %}
-                            {% if rs.Impact == "Impact" %}
+                    {# {% for rs in allResults %}
+                        {% if rs.Categorie == ReqSQL1 %}
+                            {% if rs.Impact == ReqSQL2 %}
                                 <li><a class="dropdown-item">{{rs.projectName}}<button type="button" class="btn btn-primary">Voir la solution</button> </a></li>
                                 <li><hr class="dropdown-divider" /></li>
                             {% endif %}
                         {% endif %}
-                    {% endfor %}
+                    {% endfor %} #}
+
+                    
+                    <p>Bonjour {{ ReqSQL1 }}!</p>
+                    
+                    
                 </ul>
             </li>
         </div>
@@ -30,7 +35,7 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        {# <script src="js/scripts.js"></script> #}
         <!-- End bootstrap core JS -->
 
 {% endblock %}
