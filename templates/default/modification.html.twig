@@ -5,36 +5,33 @@
 {% endblock %}
 
 {% block body %}
-	<link rel="stylesheet" type="text/css" href="{{ asset('public\assets\css\styles.css') }}">
-	<div class="bg_form">
-		<form class="form_content">
-			<div class="form-group">
-				<section class="container">
-					<div class="row">
-						<div class="col">
-							<h1>
-								Modification
-							</h1>
-							<form method="post" action="{{ path('app_modification', {'id': ajout.id}) }}">
-								{{ form_start(modifForm) }}
-								<fieldset>
-									{{ form_row(modifForm.ProjectName) }}
-									{{ form_row(modifForm.Categorie) }}
-									{{ form_row(modifForm.Impact) }}
-									{{ form_row(modifForm.Objet) }}
-									{{ form_row(modifForm.Version) }}
-									{{ form_row(modifForm.Description) }}
-									{{ form_row(modifForm.Solution) }}
-								</fieldset>
-								<button type="submit" class="btn btn-danger btn-lg mt-3">
-									Modifier
-								</button>
-								{{ form_end(modifForm) }}
-							</form>
-						</div>
-					</div>
-				</section>
+<br>
+	<section class="container">
+		<div class="row">
+			<div class="col">
+				<h1>
+					Modification
+				</h1>
+				<form method="post" action="{{ path('app_modification', {'id': ajout.id}) }}">
+					{{ form_start(modifForm) }}
+					<fieldset>
+						{{ form_row(modifForm.ProjectName) }}
+						<br>
+						{{ form_row(modifForm.Categorie) }}
+						<br>
+						{{ form_row(modifForm.Impact) }}
+						<br>
+						{{ form_row(modifForm.Objet) }}
+						{{ form_row(modifForm.Version) }}
+						{{ form_row(modifForm.Description) }}
+						{{ form_row(modifForm.Solution) }}
+					</fieldset>
+					<button type="submit" class="btn btn-danger btn-lg mt-3">
+						Modifier
+					</button>
+					{{ form_end(modifForm) }}
+				</form>
 			</div>
-		</form>
-	</div>
-{% endblock %}
+		</div>
+	</section>
+</div></form></div>{% endblock %}

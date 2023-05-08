@@ -7,6 +7,7 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Html;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -59,7 +60,7 @@ class AjoutFormType extends AbstractType
                 ],
                 'label' => 'Objet',
             ])
-            ->add('Description', TextType::class, [
+            ->add('Description', TextareaType::class, [
                 'attr' => [
                     'class' => 'form-control',
                 ],
@@ -71,9 +72,9 @@ class AjoutFormType extends AbstractType
                 ],
                 'label' => 'Version',
             ])
-            ->add('Solution', TextType::class, [
+            ->add('Solution', TextareaType::class, [
                 'attr' => [
-                    'class' => 'form-control',
+                    'class' => 'form-control', 'rows' =>7,
                 ],
                 'label' => 'Solution',
             ]);

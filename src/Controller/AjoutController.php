@@ -7,15 +7,19 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Ajout;
-
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Security;
+
 
 class AjoutController extends AbstractController
 {
     #[Route('/ajouter', name: 'app_ajouter')]
-    public function ajout(Request $request, EntityManagerInterface $entityManager): Response
+    public function ajout(Request $request, EntityManagerInterface $entityManager, Security $security): Response
     {
+        if (!$security->isGranted('ROLE_USER') && !$security->isGranted('ROLE_ADMIN')) {
+            return $this->redirectToRoute('app_login');
+        }
         $user = new Ajout();
         $form = $this->createForm(AjoutFormType::class, $user);
         $form->handleRequest($request);
@@ -44,6 +48,7 @@ class AjoutController extends AbstractController
     #[Route('/modification/{id}', name: 'app_modification')]
     public function modifier(Request $request, EntityManagerInterface $entityManager, int $id): Response
     {
+        
         // Récupérer l'objet à modifier depuis la base de données
 
         $ajout = $entityManager->getRepository(Ajout::class)->find($id);
@@ -68,10 +73,7 @@ class AjoutController extends AbstractController
             // Persister l'objet modifié dans la base de données
             $entityManager->persist($ajout);
             $entityManager->flush();
-            echo(dump($request));
 
-            // Rediriger l'utilisateur vers la liste des ajouts
-            return $this->redirectToRoute('liste_ajouts');
         }
         else {
             dump($form->getErrors());

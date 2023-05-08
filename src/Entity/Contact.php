@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\id;
 use App\Repository\ContactRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -12,8 +13,12 @@ class Contact
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(name: "id_mail", type: "integer")]
     private ?int $idMail = null;
+
+    #[ORM\ManyToOne(targetEntity: Users::class)]
+    #[ORM\JoinColumn(name: "user_id", referencedColumnName: "id", nullable: false)]
+    private ?Users $user = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     #[Assert\NotBlank()]
@@ -42,14 +47,25 @@ class Contact
     #[Assert\NotNull()]
     private ?\DateTimeImmutable $createdAt;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->createdAt = new \DateTimeImmutable();
     }
     public function getIdMail(): ?int
     {
         return $this->idMail;
     }
+    public function getUser(): ?Users
+    {
+        return $this->user;
+    }
 
+    public function setUser(Users $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
     public function getFirstname(): ?string
     {
         return $this->Firstname;
