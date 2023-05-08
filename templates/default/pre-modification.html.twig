@@ -12,7 +12,7 @@
             <li class="no_list">
                 <ul class="no_list" id="mantis-list">
                     {% for pb in allProbs %}
-                    <li><a class="dropdown-item">{{pb.projectName}}<button type="button" class="btn btn-warning" onclick="location.href='/modification#{{pb.id}}';">Modifier</button> </a></li>
+                    <li><a class="dropdown-item">{{pb.projectName}}<button type="button" class="btn btn-warning" onclick="location.href='/modification/{{pb.id}}';">Modifier</button> </a></li>
                     <li><hr class="dropdown-divider" /></li>
                     {% endfor %}
                 </ul>

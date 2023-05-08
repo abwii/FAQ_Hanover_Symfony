@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+
 use App\Form\AjoutFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,7 +21,7 @@ class AjoutController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            
+
             $entityManager->persist($user);
             $entityManager->flush();
             // do anything else you need here, like send an email
@@ -34,37 +35,52 @@ class AjoutController extends AbstractController
             echo 'alert("Project successfully added!")';
             echo '</script>';
         }
-        
+
         return $this->render('default/ajouter.html.twig', [
             'ajoutForm' => $form->createView(),
         ]);
     }
 
-    #[Route('/modification', name: 'app_modification')]
-    public function modif(Request $request, EntityManagerInterface $entityManager): Response
+    #[Route('/modification/{id}', name: 'app_modification')]
+    public function modifier(Request $request, EntityManagerInterface $entityManager, int $id): Response
     {
-        $user = new Ajout();
-        $form = $this->createForm(AjoutFormType::class, $user);
-        $form->handleRequest($request);
+        // Récupérer l'objet à modifier depuis la base de données
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        $ajout = $entityManager->getRepository(Ajout::class)->find($id);
 
-            $entityManager->persist($user);
-            $entityManager->flush();
-            // do anything else you need here, like send an email
+        // Vérifier si l'objet a été trouvé
 
-            // return $userAuthenticator->authenticateUser(
-            //     $user,
-            //     $authenticator,
-            //     $request
-            // );
-            echo ("modifé");
+        if (!$ajout) {
+            throw $this->createNotFoundException('L\'ajout avec l\'id ' . $id . ' n\'a pas été trouvé.');
+            
         }
         
-        return $this->render('default/modification.html.twig',[
+
+        // Créer le formulaire avec l'objet à modifier
+        $form = $this->createForm(AjoutFormType::class, $ajout);
+        $form->handleRequest($request);
+        dump($form->getData());
+
+        // Vérifier si le formulaire a été soumis et est valide
+
+        if ($form->isSubmitted() && $form->isValid()&& $request->isMethod('POST')) {
+
+            // Persister l'objet modifié dans la base de données
+            $entityManager->persist($ajout);
+            $entityManager->flush();
+            echo(dump($request));
+
+            // Rediriger l'utilisateur vers la liste des ajouts
+            return $this->redirectToRoute('liste_ajouts');
+        }
+        else {
+            dump($form->getErrors());
+        }
+
+        // Afficher le formulaire pour modifier l'objet
+        return $this->render('default/modification.html.twig', [
             'modifForm' => $form->createView(),
+            'ajout' => $ajout // Passer l'objet à la vue pour pouvoir afficher ses propriétés dans le formulaire
         ]);
     }
-    
-    
 }

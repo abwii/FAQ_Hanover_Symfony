@@ -2,12 +2,10 @@
 
 {% block title %}
 	Modification
-
-
 {% endblock %}
 
 {% block body %}
-    <link rel="stylesheet" type="text/css" href="{{ asset('public\assets\css\styles.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('public\assets\css\styles.css') }}">
 	<div class="bg_form">
 		<form class="form_content">
 			<div class="form-group">
@@ -17,22 +15,26 @@
 							<h1>
 								Modification
 							</h1>
-							{{ form_start(modifForm) }}
-							<fieldset>
-								{{ form_row(modifForm.ProjectName) }}
-								{{ form_row(modifForm.Categorie) }}
-								{{ form_row(modifForm.Objet) }}
-								{{ form_row(modifForm.Version) }}
-								{{ form_row(modifForm.Description) }}
-								{{ form_row(modifForm.Solution) }}
-							</fieldset>
-							<button type="submit" class="btn btn-danger btn-lg mt-3">
-								Register
-							</button>
-							{{ form_end(modifForm) }}
+							<form method="post" action="{{ path('app_modification', {'id': ajout.id}) }}">
+								{{ form_start(modifForm) }}
+								<fieldset>
+									{{ form_row(modifForm.ProjectName) }}
+									{{ form_row(modifForm.Categorie) }}
+									{{ form_row(modifForm.Impact) }}
+									{{ form_row(modifForm.Objet) }}
+									{{ form_row(modifForm.Version) }}
+									{{ form_row(modifForm.Description) }}
+									{{ form_row(modifForm.Solution) }}
+								</fieldset>
+								<button type="submit" class="btn btn-danger btn-lg mt-3">
+									Modifier
+								</button>
+								{{ form_end(modifForm) }}
+							</form>
 						</div>
 					</div>
 				</section>
-			</form>
-		</div>
-	{% endblock %}
+			</div>
+		</form>
+	</div>
+{% endblock %}

@@ -23,7 +23,7 @@
                                 {% for tag in tags %}
                                     {% if rs.description matches '/\\b' ~ tag ~ '/i' %}
                                         {% if rs.id not in Array %}
-                                            <li><a class="dropdown-item">{{rs.projectName}}<button type="button" class="btn btn-primary">Voir la solution</button> </a></li>
+                                            <li><a class="dropdown-item">{{rs.projectName}}<button onclick="window.location='/modification/{{rs.id}}'" type="button" class="btn btn-primary">Voir la solution</button> </a></li>
                                             <li><hr class="dropdown-divider" /></li>
                                             {% set Array = Array|merge([rs.id]) %}
                                         {% endif %}
