@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{% set ReqSQL1 = app.request.cookies.get('ReqSQL1') %}
+{% set ReqSQL2 = app.request.cookies.get('ReqSQL2') %}
+{% set ReqSQL3 = app.request.cookies.get('ReqSQL3') %}
+{% set tags = ReqSQL3|split(',') %}
+{% set Array = [] %}
+
+<title>HanoverFAQ</title>
+
+        <!-- Page content-->
+        
+        <br><br>
+        <h2 class="title_form">Liste des mantis correspondant à la recherche</h2>
+        <button onclick="window.location='/resultat'" type="button" class="btn btn-primary">Retour aux problématiques</button>
+        
+        <div class="bg_form">
+            <li class="no_list">
+                <ul class="no_list" id="mantis-list">
+                    {% for rs in allResults %}
+                        <li><a class="dropdown-item">{{rs.projectName}}<button onclick="#" type="button" class="btn btn-primary">Voir le mantis</button> </a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                    {% endfor %}
+                    
+                    
+                </ul>
+            </li>
+        </div>
+        <!-- End page content -->
+
+
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        {# <script src="js/scripts.js"></script> #}
+        <!-- End bootstrap core JS -->
+
+{% endblock %}
