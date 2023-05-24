@@ -1,14 +1,14 @@
 parameters :
   locale: fr
   
-  mantis_database_host: 217.16.1.81
-  mantis_database_port: 3306
-  mantis_database_user: WBacha
-  mantis_database_password: wbaHan:3!
-  mantis_database_name: mantis
+  mantis_database_host: ''
+  mantis_database_port: ''
+  mantis_database_user: ''
+  mantis_database_password: ''
+  mantis_database_name: ''
 
-  symfony_database_host: 127.0.0.1
-  symfony_database_port: 3306
-  symfony_database_user: root
+  symfony_database_host: ''
+  symfony_database_port: ''
+  symfony_database_user: ''
   symfony_database_password: ''
-  symfony_database_name: hanoverfaq
+  symfony_database_name: ''
