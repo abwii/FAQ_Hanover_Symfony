@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\AjoutsRepository;
-use App\Entity\Ajout;
+use App\Entity\Symfony\Ajout;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

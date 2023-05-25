@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Contact;
+use App\Entity\Symfony\Contact;
 use App\Form\ContactFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,7 +21,7 @@ class ContactController extends AbstractController
         }
 
         $user = $this->getUser(); // Récupérer l'utilisateur connecté
-        $contact = new Contact();
+        $contact = new \App\Entity\Symfony\Contact();
         $contact->setUser($user); // Définir l'utilisateur connecté pour l'entité Contact
 
         $form = $this->createForm(ContactFormType::class, $contact);

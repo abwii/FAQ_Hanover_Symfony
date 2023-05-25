@@ -2,13 +2,13 @@
 
 namespace App\Repository;
 
-use App\Entity\Ajout;
+use App\Entity\Symfony\Ajout;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 
 /**
- * @extends ServiceEntityRepository<Ajout>
+ * @extends ServiceEntityRepository<\App\Entity\Ajout>
  *
  * @method Ajout|null find($id, $lockMode = null, $lockVersion = null)
  * @method Ajout|null findOneBy(array $criteria, array $orderBy = null)
@@ -22,7 +22,7 @@ class AjoutsRepository extends ServiceEntityRepository
         parent::__construct($registry, Ajout::class);
     }
 
-    public function save(Ajout $entity, bool $flush = false): void
+    public function save(\App\Entity\Symfony\Ajout $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -31,7 +31,7 @@ class AjoutsRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Ajout $entity, bool $flush = false): void
+    public function remove(\App\Entity\Symfony\Ajout $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 

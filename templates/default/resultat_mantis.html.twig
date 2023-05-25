@@ -14,17 +14,20 @@
         
         <br><br>
         <h2 class="title_form">Liste des mantis correspondant à la recherche</h2>
-        <button onclick="window.location='/resultat'" type="button" class="btn btn-primary">Retour aux problématiques</button>
-        
+
+        <br>
+
+        <div class="centraient">
+            <button onclick="window.location='/resultat'" type="button" class="btn btn-primary">Retour aux problématiques</button>
+        </div>
+
         <div class="bg_form">
             <li class="no_list">
                 <ul class="no_list" id="mantis-list">
                     {% for rs in allResults %}
-                        <li><a class="dropdown-item">{{rs.projectName}}<button onclick="#" type="button" class="btn btn-primary">Voir le mantis</button> </a></li>
+                        <li><a class="dropdown-item">{{rs.projectName}}<button onclick="#" type="button" class="btn btn-primary center">Voir le mantis</button> </a></li>
                         <li><hr class="dropdown-divider" /></li>
                     {% endfor %}
-                    
-                    
                 </ul>
             </li>
         </div>

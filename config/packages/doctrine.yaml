@@ -32,15 +32,34 @@ doctrine:
         # either here or in the DATABASE_URL env var (see .env file)
         #server_version: '15'
     orm:
-        auto_generate_proxy_classes: true
-        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
-        auto_mapping: true
-        mappings:
-            App:
-                is_bundle: false
-                dir: '%kernel.project_dir%/src/Entity'
-                prefix: 'App\Entity'
-                alias: App
+        default_entity_manager : 'symfony_connection'
+        naming_strategy : doctrine.orm.naming_strategy.underscore_number_aware
+        entity_manager :
+            symfony_em :
+                connection: symfony_connection
+                auto_generate_proxy_classes: true
+                naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+                auto_mapping: true
+                mappings:
+                    Symfony:
+                        type : annotation
+                        is_bundle: false
+                        dir: '%kernel.project_dir%/src/Entity/Symfony'
+                        prefix: 'App\Entity\Symfony'
+                        alias: App
+
+            mantis_em :
+                connection: mantis_connection
+                auto_generate_proxy_classes: true
+                naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+                auto_mapping: true
+                mappings:
+                    Mantis:
+                        type : annotation
+                        is_bundle: false
+                        dir: '%kernel.project_dir%/src/Entity/Mantis'
+                        prefix: 'App\Entity\Mantis'
+                        alias: App
 
 when@test:
     doctrine:

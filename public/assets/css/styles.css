@@ -11343,7 +11343,12 @@ textarea.form-control-lg {
 }
 
 .center{
-  justify-content: center
+  justify-content: center;
+}
+
+.centraient{
+  display: flex;
+  justify-content: center;
 }
 
 #mantis-list{

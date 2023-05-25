@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\Ajout;
+use App\Entity\Symfony\Ajout;
 use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Html;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;

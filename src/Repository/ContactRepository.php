@@ -2,12 +2,12 @@
 
 namespace App\Repository;
 
-use App\Entity\Contact;
+use App\Entity\Symfony\Contact;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Contact>
+ * @extends ServiceEntityRepository<\App\Entity\Symfony\Contact>
  *
  * @method Contact|null find($id, $lockMode = null, $lockVersion = null)
  * @method Contact|null findOneBy(array $criteria, array $orderBy = null)
@@ -21,7 +21,7 @@ class ContactRepository extends ServiceEntityRepository
         parent::__construct($registry, Contact::class);
     }
 
-    public function save(Contact $entity, bool $flush = false): void
+    public function save(\App\Entity\Symfony\Contact $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +30,7 @@ class ContactRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Contact $entity, bool $flush = false): void
+    public function remove(\App\Entity\Symfony\Contact $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 

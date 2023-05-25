@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace App\Entity\Symfony;
 
 use App\Entity\id;
 use App\Repository\ContactRepository;

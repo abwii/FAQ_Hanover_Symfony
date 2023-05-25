@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\Ajout;
-use App\Entity\PreModification;
+use App\Entity\Symfony\Ajout;
+use App\Entity\Symfony\PreModification;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

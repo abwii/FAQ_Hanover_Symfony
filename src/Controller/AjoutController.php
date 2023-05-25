@@ -6,7 +6,7 @@ use App\Form\AjoutFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Entity\Ajout;
+use App\Entity\Symfony\Ajout;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Security;
@@ -20,7 +20,7 @@ class AjoutController extends AbstractController
         if (!$security->isGranted('ROLE_USER') && !$security->isGranted('ROLE_ADMIN')) {
             return $this->redirectToRoute('app_login');
         }
-        $user = new Ajout();
+        $user = new \App\Entity\Symfony\Ajout();
         $form = $this->createForm(AjoutFormType::class, $user);
         $form->handleRequest($request);
 
