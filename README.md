@@ -15,4 +15,9 @@ téléchargement de parameters.yaml
     insérer le fichier dans config\packages
     (le chemin du fichier doit être : "config\packages\parameters.yaml")
     
+Acces admin : 
+     Pour tester la page register et la page login, vous pouvez vius connecter dans un premier temps avec ces identifiants : 
+     -login : testbtssioslam@gmail.com
+     -mdp : btssio
+Seul les administrateurs peuvent creer des identifiants
     
