@@ -17,7 +17,13 @@ téléchargement de parameters.yaml
     
 Acces admin : 
      Pour tester la page register et la page login, vous pouvez vius connecter dans un premier temps avec ces identifiants : 
-     -login : testbtssioslam@gmail.com
-     -mdp : btssio
+     -login : wassim.bacha@gmail.com
+     -mdp : wassim
+     ou
+     -login : nathan95130.nl@gmail.com
+     -mdp : nathan
+<br>
+Ces identifiants sont temporaires et seront plus sercurisé pour la mise en production du site.
 Seul les administrateurs peuvent creer des identifiants
+
     
